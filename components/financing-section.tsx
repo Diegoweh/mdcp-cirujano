@@ -22,13 +22,13 @@ export function FinancingSection() {
 
         {/* Text content - right side */}
         <div className="w-full md:w-1/2">
-          <h2 className="font-sans text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+          <h2 className="font-sans text-4xl font-bold tracking-tight text-[#c7bfa8] md:text-5xl lg:text-6xl">
             Financia tu
             <br />
             tratamiento.
           </h2>
 
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-[#c8b9a0] md:text-lg">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-white md:text-lg">
             Financiar tu cirugia estetica es muy simple. Asi podras
             realizarte el procedimiento que deseas y fraccionar el
             pago hasta 12 meses o como mas te convenga.

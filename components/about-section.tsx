@@ -24,7 +24,7 @@ export function AboutSection() {
 
           {/* Text Content */}
           <div className="w-full">
-            <p className="text-xs font-semibold tracking-[0.25em] text-[#838383] uppercase">
+            <p className="text-xs font-semibold tracking-[0.25em] text-[#9b988e] uppercase">
               Acerca de m&iacute;
             </p>
 
@@ -39,13 +39,13 @@ export function AboutSection() {
             <div className="mt-8 flex flex-wrap gap-4 md:mt-10">
               <Link
                 href="#servicios"
-                className="inline-block rounded-full border border-[#838383] px-7 py-3 text-sm font-medium tracking-wide text-[#838383] transition-colors hover:border-foreground hover:bg-[#838383] hover:text-[#ece8e3]"
+                className="inline-block rounded-full border border-[#9b988e] px-7 py-3 text-sm font-medium tracking-wide text-[#9b988e] transition-colors hover:border-foreground hover:bg-[#9b988e] hover:text-[#ece8e3]"
               >
                 Ver Servicios
               </Link>
               <Link
                 href="#agenda"
-                className="inline-block rounded-full bg-[#575656] px-7 py-3 text-sm font-medium tracking-wide text-[#ece8e3] transition-colors hover:bg-[#33312b] hover:text-[#ece8e3]"
+                className="inline-block rounded-full bg-[#9b988e] px-7 py-3 text-sm font-medium tracking-wide text-[#ece8e3] transition-colors hover:bg-[#33312b] hover:text-[#ece8e3]"
               >
                 Agenda tu cita
               </Link>
