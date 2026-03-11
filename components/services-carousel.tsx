@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Reveal } from "@/components/reveal"
 
 type ServicesCarouselProps = {
   images: string[]
@@ -38,7 +39,7 @@ export function ServicesCarousel({ images }: ServicesCarouselProps) {
 
   return (
     <section className="w-full bg-[#ece8e3] px-4 py-14 md:py-20">
-      <div className="mx-auto max-w-4xl">
+      <Reveal className="mx-auto max-w-4xl">
 
         {/* Header */}
         <div className="mb-12 flex flex-col items-center text-center">
@@ -125,7 +126,7 @@ export function ServicesCarousel({ images }: ServicesCarouselProps) {
             ))}
           </div>
         )}
-      </div>
+      </Reveal>
     </section>
   )
 }

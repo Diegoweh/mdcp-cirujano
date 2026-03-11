@@ -1,4 +1,7 @@
 import Image from "next/image"
+import Link from "next/link"
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/reveal"
+import { whatsappHref } from "@/lib/whatsapp"
 
 const services = [
   {
@@ -30,21 +33,29 @@ const services = [
 export function ServicesSection() {
   return (
     <section id="servicios" className="bg-[#ece8e3] py-20 px-6 md:px-12 lg:px-20">
-      <h3 className="text-2xl md:text-3xl text-[#838383] uppercase mt-5 mb-3 justify-center flex">
-        Nuestros servicios
-      </h3>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-semibold text-[#3a3a3a] mb-6">
-        {"¿Qué podemos hacer por ti?"}
-      </h2>
-      <div className="mt-3 mb-14 flex justify-center">
-        <div className="max-w-sm w-full py-1 rounded bg-[#959083]" />
-      </div>
+      <Reveal>
+        <h3 className="mt-5 mb-3 flex justify-center text-2xl text-[#838383] uppercase md:text-3xl">
+          Nuestros servicios
+        </h3>
+      </Reveal>
+      <Reveal delay={0.08}>
+        <h2 className="mb-6 text-center text-3xl font-semibold text-[#3a3a3a] md:text-4xl lg:text-5xl">
+          {"¿Qué podemos hacer por ti?"}
+        </h2>
+      </Reveal>
+      <Reveal delay={0.14}>
+        <div className="mt-3 mb-14 flex justify-center">
+          <div className="max-w-sm w-full rounded bg-[#959083] py-1" />
+        </div>
+      </Reveal>
 
-      <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10">
+      <StaggerGroup className="mx-auto grid max-w-6xl grid-cols-1 gap-10 md:grid-cols-2" stagger={0.16}>
         {services.map((service) => (
-          <ServiceCard key={service.title} {...service} />
+          <StaggerItem key={service.title}>
+            <ServiceCard {...service} />
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerGroup>
     </section>
   )
 }
@@ -65,7 +76,7 @@ function ServiceCard({
           src={image}
           alt={title}
           fill
-          className="object-cover object-top"
+          className="object-cover object-top transition-transform duration-700 hover:scale-[1.03]"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>      
@@ -78,12 +89,14 @@ function ServiceCard({
         {description}
       </p>
 
-      <a
-        href="#"
+      <Link
+        href={whatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex items-center self-start rounded-full border border-[#a09888] px-5 py-2 text-xs tracking-wide text-[#5a5650] transition-colors hover:bg-[#a09888] hover:text-[#fff]"
       >
         Conoce más
-      </a>
+      </Link>
     </div>
   )
 }

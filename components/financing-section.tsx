@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { StaggerGroup, StaggerItem } from "@/components/reveal"
 
 export function FinancingSection() {
   return (
@@ -21,30 +22,35 @@ export function FinancingSection() {
         <div className="hidden w-1/2 md:block" />
 
         {/* Text content - right side */}
-        <div className="w-full md:w-1/2">
-          <h2 className="font-sans text-4xl font-bold tracking-tight text-[#c7bfa8] md:text-5xl lg:text-6xl">
-            Financia tu
-            <br />
-            tratamiento.
-          </h2>
+        <StaggerGroup className="w-full md:w-1/2" stagger={0.14}>
+          <StaggerItem>
+            <h2 className="font-sans text-4xl font-bold tracking-tight text-[#c7bfa8] md:text-5xl lg:text-6xl">
+              Financia tu
+              <br />
+              tratamiento.
+            </h2>
+          </StaggerItem>
 
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-white md:text-lg">
-            Financiar tu cirugia estetica es muy simple. Asi podras
-            realizarte el procedimiento que deseas y fraccionar el
-            pago hasta 12 meses o como mas te convenga.
-          </p>
+          <StaggerItem>
+            <p className="mt-6 max-w-lg text-base leading-relaxed text-white md:text-lg">
+              Financiar tu cirugía estética es muy simple. Así podrás
+              realizarte el procedimiento que deseas y fraccionar el
+              pago hasta 12 meses o como más te convenga.
+            </p>
+          </StaggerItem>
 
-          {/* Mend logo */}
-          <div className="mt-8">
-            <Image
-              src="/img/mend-logo.png"
-              alt="Mend - Financiamiento"
-              width={140}
-              height={50}
-              className="h-auto w-28 md:w-36"
-            />
-          </div>
-        </div>
+          <StaggerItem>
+            <div className="mt-8">
+              <Image
+                src="/img/mend-logo.png"
+                alt="Mend - Financiamiento"
+                width={140}
+                height={50}
+                className="h-auto w-28 md:w-36"
+              />
+            </div>
+          </StaggerItem>
+        </StaggerGroup>
       </div>
     </section>
   )

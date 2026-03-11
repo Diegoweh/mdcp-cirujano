@@ -6,10 +6,12 @@ import { ServicesCarousel } from "@/components/services-carousel"
 import { FinancingSection } from "@/components/financing-section"
 import { WorkSpot } from "@/components/work-spot"
 import { Footer } from "@/components/footer"
+import { StructuredData } from "@/components/structured-data"
 
 export default function Home() {
   return (
     <main className="bg-[#ece8e3]">
+      <StructuredData />
       <Navbar />
       <HeroSection />
       <AboutSection />
