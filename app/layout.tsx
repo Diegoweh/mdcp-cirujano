@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
-  keywords: siteConfig.keywords,
+  keywords: [...siteConfig.keywords],
   applicationName: siteConfig.name,
   authors: [{ name: "Dr. Mauricio de la Concha" }],
   creator: "Dr. Mauricio de la Concha",
